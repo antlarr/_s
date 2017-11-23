@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package Ankh-Morpork
  */
 
 ?>
@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ankh-morpork' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -43,7 +43,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" />
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'menu-1',
@@ -51,6 +51,14 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
+
 	</header><!-- #masthead -->
+
+        <?php if( !is_front_page() && function_exists('bcn_display')) : ?>
+                <div class="breadcrumbs" typeof="BreadcrumbList" vocab="http://schema.org/">
+                        <a href="/"><?php _e('Home') ?></a>
+                        <?php bcn_display(); ?>
+                </div>
+        <?php endif; ?>
 
 	<div id="content" class="site-content">

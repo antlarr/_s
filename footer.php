@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package _s
+ * @package Ankh-Morpork
  */
 
 ?>
@@ -15,15 +15,9 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', '_s' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="https://automattic.com/">Automattic</a>' );
-			?>
+                        &#169; <?php echo date("Y") . ' ' . get_bloginfo( 'name' ) ?>
+                        <span class="sep"> • </span>
+			Powered by <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ankh-morpork' ) ); ?>">WordPress</a> and <a href="<?php echo esc_url( __( 'https://github.com/antlarr/ankh-morpork/', 'ankh-morpork' ) ); ?>">Ankh-Morpork</a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

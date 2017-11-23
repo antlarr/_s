@@ -1,19 +1,18 @@
 /*!
-Theme Name: _s
-Theme URI: https://underscores.me/
-Author: Automattic
-Author URI: https://automattic.com/
-Description: Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
-Version: 1.0.0
+Theme Name: Ankh-Morpork
+Theme URI: https://github.com/antlarr/ankh-morpork
+Author: antlarr
+Author URI: https://www.antlarr.com
+Description: This is a WordPress theme that tries to be as simple as possible while using flexbox and being completely responsive. It's meant to be used for blogs. Ah, and it's based on <code>_s</code>.
+Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: _s
+Text Domain: ankh-morpork
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+This theme, is licensed under the GPLv2 or later.
 
-_s is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+ankh-morpork is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
@@ -48,10 +47,15 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+        width: 100%;
+        height: 100%;
 }
 
 body {
 	margin: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
 }
 
 article,
@@ -350,7 +354,7 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0;
 }
 
 ul {
@@ -693,12 +697,16 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 1em 0;
 	/* Make sure select elements fit in widgets. */
 }
 
 .widget select {
 	max-width: 100%;
+}
+
+.widget-title {
+  	margin: 0.6rem 0 0.6rem 0;
 }
 
 /*--------------------------------------------------------------
@@ -850,4 +858,647 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+
+/*--------------------------------------------------------------
+ * Site header */
+.site-header {
+    display:flex;
+    flex-direction: row;
+    padding: 0;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 2rem;
+    background-color: rgba(17,79,91,0.17);
+    border-bottom: 1px solid #abc;
+}
+.site-branding {
+    justify-content: flex-start;
+    flex: 1 1 auto;
+
+    font-family: Roboto;
+    font-weight: 700;
+    line-height: 1;
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+}
+.main-navigation {
+    justify-content: flex-end;
+    flex-basis: 0;
+    margin: 0em 1em 0.5em 0;
+}
+.site-title {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-size: 1.789em;
+    font-weight: 700;
+    flex-wrap: nowrap;
+}
+
+.site-description {
+    font-family: Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace;
+    font-size: 0.789em;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.025em;
+    line-height: 1.2;
+    text-transform: none;
+    color: #6f767a;
+    margin: 0;
+}
+
+.primary-menu {
+    display:none;
+}
+
+.main-navigation div {
+    display:none;
+}
+
+.menu-toggle {
+    display:block;
+    color: white;
+    background-color: black
+    ;
+}
+/*
+.site-title {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    font-size: 1.789em;
+    font-weight: 700;
+}
+
+.site-branding {
+    font-family: Roboto;
+    font-weight: 700;
+    padding-left: 2rem;
+    background-color: rgba(17,79,91,0.17);
+    border-bottom: 1px solid #abc;
+    line-height: 1;
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
+}
+
+.site-header a:hover {
+    color: inherit;
+}
+
+.site-description {
+    font-family: Monaco,"Lucida Sans Typewriter","Lucida Typewriter","Courier New",Courier,monospace;
+    font-size: 0.789em;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.025em;
+    line-height: 1.2;
+    text-transform: none;
+    color: #6f767a;
+    margin: 0;
+}
+
+.primary-menu {
+    display:none;
+}
+
+.main-navigation {
+    display:none;
+}
+*/
+.entry-title {
+	margin-top: 0.2em;
+	margin-bottom: 0.2em;
+}
+
+.entry-meta {
+	font-size: 70%;
+}
+
+.entry-content {
+	margin-top: 0;
+}
+
+.content-area {
+	padding-right: 2em
+}
+
+.site {
+  width: 100%;
+}
+
+.site-main {
+  width: 100%;
+}
+
+.main-navigation .menu-toggle {
+    width: 28px;
+    height: 26px;
+    background: url(images/menu.png) no-repeat center;
+}
+
+.site-content {
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+	padding-left: 2em;
+	padding-right: 2em;
+	display:flex;
+	flex-direction: row;
+	flex: 1 0 auto;
+
+}
+
+
+@media only screen and (max-width: 750px) {
+  .site-content {
+	flex-direction: column;
+  }
+
+  .site-header {
+        padding-left: 1rem;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .site-content {
+	flex-direction: row;
+  }
+}
+
+#primary {
+    float:left;
+    display:flex;
+    margin-top: 2rem;
+    flex: 1 1 auto;
+}
+
+#secondary {
+    display:flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+}
+
+a:hover {
+    color: #2e3191;
+}
+
+.entry-content a {
+    text-decoration: underline;
+    color: #0078a8;
+}
+
+.entry-content a:hover {
+    text-decoration: none;
+    color: #800880;
+}
+
+
+.cat-links, .tags-links, .comments-link {
+    display: block;
+}
+
+img.cat-links, img.tags-links {
+    display: inline;
+    vertical-align: text-bottom;
+}
+ul.cat-links , ul.tags-links {
+    display:inline;
+    margin: 0;
+    padding-left: 0.3em;
+    margin-top: 0.1rem;
+}
+li.category, li.tag {
+    display:inline;
+    border: 0;
+    border-radius: 3px;
+/*    margin-left: 0em;
+    padding: 0 0em;*/
+}
+
+li.category a:hover, li.tag a:hover {
+    text-decoration: underline;
+    background-color: #fff;
+}
+
+.cat-links li:after,
+.tags-links li:after {
+    content: ', ';
+}
+
+.cat-links li:last-child:after,
+.tags-links li:last-child:after {
+    content: '';
+}
+
+.edit-link a {
+    color: #005ea5;
+}
+.edit-link :hover {
+    text-decoration: underline;
+}
+.edit-link .comment-edit-link {
+    padding-left: 1em;
+}
+
+
+.site-info, #infinite-footer .blog-info {
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    width:100%;
+}
+
+#infinite-footer .blog-info a, .site-footer a {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.site-footer, #infinite-footer {
+    border-top: 1px solid #ccc;
+    background-color: rgba(246,246,246,0.95);
+}
+
+/** This is to replace a broken media select on jetpack */
+@media (max-width: 640px) {
+#infinite-footer {
+    position: fixed;
+}
+}
+
+/* For the Archive list in the sidebar
+ul {
+	margin-left: 0;
+}*/
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1;
+}
+
+.site-info {
+    font-size: 70%;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
+.site-content {
+    padding-left: 2em;
+    padding-right: 2em;
+    display:flex;
+    flex: 1 0 auto;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    padding-top: 0rem;
+}
+
+.entry-meta {
+    color: #888;
+}
+
+body {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+    color: #22222a;
+}
+
+@media (min-width: 700px) {
+   body {
+       font-size: 1.063em
+   }
+}
+
+.byline a, .entry-byline a:visited, .format-status .entry-footer a, .format-status .entry-footer a:visited {
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.posted-on a {
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+#secondary a, #secondary a:visited {
+    color: #005ea5;
+}
+
+/*
+.site-header a:hover {
+    color: inherit;
+}
+*/
+
+#secondary a:hover {
+    text-decoration: underline
+}
+
+li {
+    display: list-item;
+    text-align: match-parent;
+}
+
+#secondary ul {
+    list-style: none;
+    list-style-type: none;
+    list-style-position: initial;
+    list-style-image: initial;
+    margin: 0;
+    padding: 0;
+}
+
+.widget-area {
+    font-size: .89em
+}
+
+.widget-area .post-date {
+    font-size: 70%
+}
+
+.widget-area .post-date:before {
+    content: '('
+}
+.widget-area .post-date:after {
+    content: ')'
+}
+
+.breadcrumbs {
+    color: #6d7377;
+    padding-left: 2.66em;
+    padding-top: 1em;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.4;
+    font-size: 75%;
+}
+
+.breadcrumbs a:after {
+    font-weight: 300;
+    display:inline-block;
+    content: '>';
+    margin: 0 0.4em 0;
+    opacity: .95;
+    color: #6d7377;
+    transform:scale(0.7,1.7);
+}
+
+
+
+.entry-footer {
+    color: #888;
+    font-size: 70%;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+}
+
+.entry-footer a {
+    color: #888;
+    font-weight: 500;
+}
+
+.entry-footer a:hover {
+    text-decoration: underline;
+}
+
+.more-link {
+    font-size: 70%;
+    letter-spacing: .025em;
+    background-color: #f7f7f7;
+    display: block;
+    padding: 0.2em;
+    text-align: center;
+}
+
+a.more-link  {
+text-decoration: none;
+}
+
+.more-link:hover {
+    text-decoration: underline;
+}
+
+.more-link:before {
+    content: "";
+    display: inline-block;
+    margin-right: 0.5em;
+    margin-bottom: 0.27em;
+    width: 2em;
+    border-bottom: 1px solid #000;
+}
+
+.more-link:after {
+    content: "";
+    display: inline-block;
+    margin-left: 0.5em;
+    margin-bottom: 0.27em;
+    width: 2em;
+    border-bottom: 1px solid #000;
+}
+
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+    background: rgba(39,55,64,0.05);
+    border: 1px solid rgba(39,55,64,0.08);
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: normal;
+    margin-bottom: 0;
+    outline: 0px;
+    padding: .686em .8em .686em;
+}
+
+input:hover[type="email"], input:hover[type="number"], input:hover[type="search"], input:hover[type="text"], input:hover[type="tel"], input:hover[type="url"], input:hover[type="password"], textarea:hover, select:hover {
+    background: rgba(39,55,64,0.075);
+    background-image: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgba(39, 55, 64, 0.075);
+    border: 1px solid rgba(39,55,64,0.1);
+}
+
+.archive .post,.archive-download .edd-download,.blog .post,.search .entry {
+    border-bottom: 1px solid rgba(39,55,64,0.1);
+    margin-bottom: 2rem;
+}
+
+#content input[type="submit"], .infinite-scroll #infinite-handle span button {
+    border-radius: 3px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .075em;
+    line-height: normal;
+    margin: 0;
+    outline: 0px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#content input[type="submit"],
+.form-submit {
+    float: right;
+    margin-top: 0;
+}
+.comment-form-comment {
+    margin-bottom: 0
+}
+
+/*--------------------------------------------------------------
+ * Navigation links */
+
+.nav-previous a,
+.nav-next a {
+    color: #0078a8;
+}
+
+.nav-previous a:hover {
+    text-decoration: underline;
+}
+
+.nav-next a:hover {
+    text-decoration: underline;
+}
+
+.nav-previous-arrow {
+    display:inline-block;
+    font-family: Roboto;
+    font-weight: 300;
+    margin-right: 1em;
+    transform:scale(2,4);
+    padding: 0.2rem;
+
+}
+.nav-next-arrow {
+    display:inline-block;
+    font-family: Roboto;
+    font-weight: 300;
+    margin-left: 1em;
+    transform:scale(2,4);
+    padding: 0.2rem;
+}
+
+/*--------------------------------------------------------------
+ * Comments section */
+
+ol.comment-list, .comment-list ol {
+    list-style-type: none;
+    margin: 0 0 1rem 0em;
+    padding: 0;
+}
+.comment-list ol {
+    padding-left: 2rem;
+}
+
+@media only screen and (max-width: 750px) {
+    .comment-list ol {
+	padding-left: 1em;
+    }
+}
+
+.children {
+    margin-left: 0.2em;
+}
+.comment-metadata, .comment-metadata a {
+    color: #888;
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+.comment-content p {
+    margin: 0.6em;
+}
+
+.comment-reply-link {
+    color: #000;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 0.5em 0;
+    text-decoration: underline;
+}
+.comment-reply-link:hover {
+    text-decoration: none;
+}
+.comment-reply-title {
+    margin: 0;
+}
+#cancel-comment-reply-link {
+    border-radius: 3px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .075em;
+    line-height: normal;
+    margin: 0 0 0 2em;
+    padding: 0 1em;
+    outline: 0px;
+    text-align: center;
+    text-decoration: none;
+}
+
+input.search-field {
+    padding: 3pt;
+    display: block;
+}
+
+@media only screen and (max-width: 750px) {
+input.search-field {
+  width:100%;
+}
+}
+
+#respond .form-submit input, #respond .form-submit input#comment-submit, #respond .comment-form-fields input[type=submit], #respond p.form-submit input[type=submit], #respond input[type=submit], #commentform #submit,
+#cancel-comment-reply-link, #content input[type="submit"], .infinite-scroll #infinite-handle span button
+{
+    line-height: 18px !important;
+    border: 1px solid #ccc !important;
+    padding: 3px 10px ;
+    font-size: 14px;
+    border-radius: 3px !important;
+    color: #555;
+    font-weight: normal;
+}
+
+#cancel-comment-reply-link {
+       background: none;
+       background-color : #fee;
+}
+
+#content input[type="submit"].search-submit {
+       background-color: #fefefe;
+}
+
+.entry-share-section img {
+	filter: grayscale(30%);
+}
+
+.entry-share-section img:hover {
+	filter: grayscale(0);
+	transform: scale(1.2);
 }

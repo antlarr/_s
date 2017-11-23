@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package _s
+ * @package Ankh-Morpork
  */
 
 /**
@@ -14,12 +14,14 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function _s_jetpack_setup() {
+function ankh_morpork_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => '_s_infinite_scroll_render',
+		'render'    => 'ankh_morpork_infinite_scroll_render',
 		'footer'    => 'page',
+		'footer_callback' => 'ankh_morpork_custom_footer',
+		'posts_per_page' => '3',
 	) );
 
 	// Add theme support for Responsive Videos.
@@ -28,7 +30,7 @@ function _s_jetpack_setup() {
 	// Add theme support for Content Options.
 	add_theme_support( 'jetpack-content-options', array(
 		'post-details' => array(
-			'stylesheet' => '_s-style',
+			'stylesheet' => 'ankh-morpork-style',
 			'date'       => '.posted-on',
 			'categories' => '.cat-links',
 			'tags'       => '.tags-links',
@@ -37,12 +39,12 @@ function _s_jetpack_setup() {
 		),
 	) );
 }
-add_action( 'after_setup_theme', '_s_jetpack_setup' );
+add_action( 'after_setup_theme', 'ankh_morpork_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function _s_infinite_scroll_render() {
+function ankh_morpork_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
@@ -51,4 +53,16 @@ function _s_infinite_scroll_render() {
 			get_template_part( 'template-parts/content', get_post_format() );
 		endif;
 	}
+}
+
+function ankh_morpork_custom_footer() {
+?>
+    <div id="infinite-footer" style="bottom: 0px;">
+                                <div class="blog-info">
+                         &#169; <?php echo date("Y") . ' ' . get_bloginfo( 'name' ) ?>
+                         <span class="sep"> • </span>
+                        Powered by <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ankh-morpork' ) ); ?>">WordPress</a> and <a href="<?php echo esc_url( __( 'https://github.com/antlarr/ankh-m  orpork/', 'ankh-morpork' ) ); ?>">Ankh-Morpork</a>
+                                </div>
+                </div>
+<?php
 }

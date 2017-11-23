@@ -82,12 +82,12 @@ msgstr ""
 
 #: inc/template-tags.php:55
 #. translators: 1: list of categories.
-msgid "Posted in %1$s"
+msgid "Posted in: %1$s"
 msgstr ""
 
 #: inc/template-tags.php:62
 #. translators: 1: list of tags.
-msgid "Tagged %1$s"
+msgid "Tagged: %1$s"
 msgstr ""
 
 #: inc/template-tags.php:72
