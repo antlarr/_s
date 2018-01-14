@@ -63,6 +63,11 @@ if ( ! function_exists( 'ankh_morpork_entry_footer' ) ) :
 
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 			echo '<span class="comments-link">';
+                        if ( get_comments_number() > 1 ) {
+                                echo '<img src="' . get_template_directory_uri() . '/images/comments-more.png" class="comments-link">';
+                        } else {
+                                echo '<img src="' . get_template_directory_uri() . '/images/comments-one.png" class="comments-link">';
+                        }
 			comments_popup_link(
 				sprintf(
 					wp_kses(
@@ -93,7 +98,7 @@ if ( ! function_exists( 'ankh_morpork_entry_footer' ) ) :
 				),
 				get_the_title()
 			),
-			'<span class="edit-link">',
+			'<span class="edit-link"><img src="' . get_template_directory_uri() . '/images/edit.png" class="edit-link">',
 			'</span>'
 		);
 	}

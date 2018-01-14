@@ -25,6 +25,8 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
+            <section class="entry-footer-section">
 		<?php ankh_morpork_entry_footer(); ?>
+            </section>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

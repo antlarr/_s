@@ -48,19 +48,21 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( !is_front_page() ) : ?>
+        <?php /*if ( !is_front_page() ) : */?>
             <footer class="entry-footer">
                  <section class="entry-footer-section">
                     <?php ankh_morpork_entry_footer(); ?>
                  </section>
-                 <section class="entry-share-section">
-                 <?php
-                     if ( function_exists( 'sharing_display' ) )
-                         sharing_display( '', true );
+		<?php if ( is_singular() ) : ?>
+                    <section class="entry-share-section">
+                    <?php
+                        if ( function_exists( 'sharing_display' ) )
+                            sharing_display( '', true );
 
-                     echo ankh_morpork_synved_social_share_markup();
-                 ?>
-                 </section>
+                        echo ankh_morpork_synved_social_share_markup();
+                    ?>
+                    </section>
+                <?php endif; ?>
             </footer><!-- .entry-footer -->
-        <?php endif ?>
+        <?php /* endif; */ ?>
 </article><!-- #post-<?php the_ID(); ?> -->
