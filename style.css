@@ -281,6 +281,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
 	margin-bottom: 1.5em;
+	text-align: justify;
 }
 
 dfn, cite, em, i {
@@ -288,8 +289,18 @@ dfn, cite, em, i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0 1em;
+	background: #f2f2f2;
+	padding: 0.6em 1em;
+	/*! white-space: nowrap; */
+	border-left: 2px solid rgba(17,79,128);
+	font-family: monospace;
 }
+
+blockquote p {
+	margin: 0;
+}
+
 
 address {
 	margin: 0 0 1.5em;
@@ -358,7 +369,7 @@ ul, ol {
 }
 
 ul {
-	list-style: disc;
+	list-style: square;
 }
 
 ol {
@@ -371,6 +382,13 @@ li > ol {
 	margin-left: 1.5em;
 }
 
+#primary ul > li {
+	text-align: justify;
+}
+
+#primary ul > li:nth-last-child(n+2) {
+	padding-bottom: 0.5em;
+}
 dt {
 	font-weight: bold;
 }
@@ -1042,14 +1060,13 @@ button.menu-toggle {
 
 .site-content {
         margin-bottom: 1.5rem;
-        margin-top: 0rem;
+        margin-top: 1rem;
         padding-top: 1rem;
 	padding-left: 2em;
 	padding-right: 2em;
 	display:flex;
 	flex-direction: row;
 	flex: 1 0 auto;
-
 }
 
 
@@ -1072,14 +1089,14 @@ button.menu-toggle {
 #primary {
     float:left;
     display:flex;
-    margin-top: 0;
+    margin-top: 1rem;
     flex: 1 1 auto;
 }
 
 #secondary {
     display:flex;
     flex-direction: column;
-    margin-top: 0;
+    margin-top: 1rem;
     padding: 1em;
     background-color: #f7f7f7;
     border: 1px solid #ddd;
@@ -1203,7 +1220,7 @@ a, a:visited, a:hover {
 .site-content {
     display:flex;
     flex: 1 0 auto;
-    margin-bottom: 0 2em 1.5rem 2em;
+    margin: 0 2em 1.5rem 2em;
     padding-top: 0rem;
 }
 
@@ -1576,3 +1593,4 @@ input.search-field {
 	filter: grayscale(0);
 	transform: scale(1.2);
 }
+
