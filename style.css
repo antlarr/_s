@@ -1105,6 +1105,7 @@ button.menu-toggle {
 #secondary {
     display:flex;
     flex-direction: column;
+    box-sizing: content-box;
     margin-top: 1rem;
     padding: 1em;
     background-color: #f7f7f7;
@@ -1121,9 +1122,14 @@ a:hover {
     color: #0078a8;
 }
 
+.entry-content a:visited {
+    text-decoration: none;
+    color: #7800a8;
+}
+
 .entry-content a:hover {
     text-decoration: none;
-    color: #800880;
+    color: #704880;
 }
 
 
