@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
     clear: both;
 }
 
-p {
+#primary p {
     margin-bottom: 1.5em;
     text-align: justify;
 }
@@ -293,14 +293,23 @@ blockquote {
     background: #f2f2f2;
     padding: 0.6em 1em;
     /*! white-space: nowrap; */
-    border-left: 2px solid rgba(17,79,128);
+    border-left: 2px solid rgb(17,79,128);
     font-family: monospace;
 }
 
-blockquote p {
+#primary blockquote > p {
     margin: 0;
+    text-align: initial;
+    word-break: break-word;
 }
 
+blockquote.shell > p::before {
+    content: "> ";
+}
+
+blockquote.rootshell > p::before {
+    content: "# ";
+}
 
 address {
     margin: 0 0 1.5em;
@@ -1075,9 +1084,9 @@ button.menu-toggle {
 	flex-direction: column;
   }
 
-  .site-header {
+/*  .site-header {
         padding-left: 1rem;
-  }
+  }*/
 }
 
 @media only screen and (min-width: 750px) {
@@ -1122,11 +1131,16 @@ a:hover {
     display: block;
 }
 
-img.cat-links, img.tags-links, img.comments-link, img.edit-link {
+img.cat-links, img.tags-links, img.comments-link, img.edit-link, img.byline, img.posted-on, img.readingtime {
     display: inline;
     vertical-align: text-bottom;
 }
-ul.cat-links , ul.tags-links, .comments-link a, .edit-link a {
+
+img.readingtime {
+    padding-right: 0.3em;
+}
+
+ul.cat-links , ul.tags-links, .comments-link a, .edit-link a, .byline a, .posted-on a {
     display:inline;
     margin: 0;
     padding-left: 0.3em;
@@ -1242,18 +1256,31 @@ body {
    }
 }
 
-.byline a, .entry-byline a:visited, .format-status .entry-footer a, .format-status .entry-footer a:visited {
+.entry-byline a:visited, .format-status .entry-footer a, .format-status .entry-footer a:visited {
     color: inherit;
     font-weight: 500;
+    text-decoration: none;
+}
+
+.byline a {
+    color: inherit;
+    font-weight: 400;
     text-decoration: none;
 }
 
 .posted-on a {
     color: inherit;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
 }
 
+span.posted-on {
+    padding-left: 1em;
+}
+
+span.readingtime {
+    padding-left: 1em;
+}
 
 #secondary a, #secondary a:visited {
     color: #005ea5;
