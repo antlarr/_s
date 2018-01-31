@@ -910,7 +910,29 @@ object {
     font-weight: 700;
     line-height: 1;
     padding: 0.9em 0 0.9em 2rem;
+    width: 100%;
+    box-sizing: border-box;
+
+    background-image: url('https://antlarr.io/wp-content/themes/ankh-morpork/images/banner.png');
+    background-repeat: no-repeat;
+    background-position: 80% 0;
+    background-size: contain;
 }
+
+@media only screen and (max-width: 67rem) {
+.site-branding {
+    background-position:40rem;
+}
+}
+
+@media only screen and (max-width: 750px) {
+.site-branding {
+    background-image:url('https://antlarr.io/wp-content/themes/ankh-morpork/images/banner-transparent.png');
+    background-position:center;
+}
+}
+
+
 .main-navigation {
     justify-content: flex-end;
     flex-basis: 0;
