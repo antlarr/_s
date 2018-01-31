@@ -97,7 +97,7 @@ a {
 
 a:active,
 a:hover {
-    outline: 0;
+    outline: initial;
 }
 
 abbr[title] {
@@ -301,7 +301,7 @@ blockquote {
 #primary blockquote > p {
     margin: 0;
     text-align: initial;
-    word-break: break-word;
+    word-wrap: break-word;
 }
 
 blockquote.shell > p::before {
@@ -531,7 +531,7 @@ a:focus {
 }
 
 a:hover, a:active {
-    outline: 0;
+    outline: initial;
 }
 
 /*--------------------------------------------------------------
@@ -1149,9 +1149,7 @@ img.readingtime {
 
 ul.cat-links , ul.tags-links, .comments-link a, .edit-link a, .byline a, .posted-on a {
     display:inline;
-    margin: 0;
     padding-left: 0.3em;
-    margin-top: 0.1rem;
 }
 li.category, li.tag {
     display:inline;
