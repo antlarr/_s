@@ -301,7 +301,7 @@ blockquote {
 #primary blockquote > p {
     margin: 0;
     text-align: initial;
-    word-wrap: break-word;
+    word-break: break-word;
 }
 
 blockquote.shell > p::before {
@@ -542,6 +542,7 @@ a:hover, a:active {
     display: block;
     float: left;
     width: 100%;
+    display: none; /* Disable top menu */
 }
 
 .main-navigation ul {
@@ -667,7 +668,7 @@ a:hover, a:active {
 
 /* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
-    outline: 0;
+    outline: initial;
 }
 
 /*--------------------------------------------------------------
