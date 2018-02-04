@@ -1537,8 +1537,9 @@ ol.comment-list, .comment-list ol {
     font-size: 0.72rem;
     font-weight: 500;
 }
-.comment-content p {
-    margin: 0.6em;
+
+#primary .comment-content p {
+    margin: 0.6em 0;
 }
 
 .comment-reply-link {
@@ -1557,19 +1558,11 @@ ol.comment-list, .comment-list ol {
     margin: 0;
 }
 #cancel-comment-reply-link {
-    border-radius: 3px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    color: #fff;
     cursor: pointer;
     display: inline-block;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: .075em;
-    line-height: normal;
+    letter-spacing: .055em;
     margin: 0 0 0 2em;
-    padding: 0 1em;
-    outline: 0px;
     text-align: center;
     text-decoration: none;
 }
@@ -1598,11 +1591,6 @@ input.search-field {
     color: #555;
     font-weight: normal;
     background-color: #fefefe;
-}
-
-#cancel-comment-reply-link {
-    background: none;
-    background-color : #fee;
 }
 
 .entry-share-section img {
@@ -1668,7 +1656,7 @@ transform: translateX(0%);
     margin-bottom: 0;
 }
 #primary .comment-form-comment {
-    margin-bottom: 0.5rem;
+    margin: 0 0 0.5rem;
 }
 
 #commentform .gglcptch {
