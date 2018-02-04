@@ -1463,9 +1463,6 @@ input:hover[type="email"], input:hover[type="number"], input:hover[type="search"
     float: right;
     margin-top: 0;
 }
-.comment-form-comment {
-    margin-bottom: 0
-}
 
 /*--------------------------------------------------------------
  * Navigation links */
@@ -1657,6 +1654,18 @@ transform: translateX(0%);
 }
 #primary .comment-form-comment {
     margin: 0 0 0.5rem;
+    width: 100%;
+    box-sizing: content-box;
+}
+
+#primary .comment-form-comment textarea {
+    max-width: calc(-450px + 100vw);
+}
+
+@media only screen and (max-width: 750px) {
+#primary .comment-form-comment textarea {
+    max-width: 90vw;
+}
 }
 
 #commentform .gglcptch {
