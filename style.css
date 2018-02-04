@@ -1177,6 +1177,10 @@ li.category a:hover, li.tag a:hover {
     text-decoration: underline;
 }
 .edit-link .comment-edit-link {
+    padding-left: 0em;
+}
+.comment-metadata .edit-link {
+    display: inline-block;
     padding-left: 1em;
 }
 
