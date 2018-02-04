@@ -1577,6 +1577,8 @@ ol.comment-list, .comment-list ol {
 input.search-field {
     padding: 3pt;
     display: block;
+    width:100%;
+    box-sizing:border-box;
 }
 
 @media only screen and (max-width: 750px) {
