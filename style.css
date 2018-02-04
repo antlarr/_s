@@ -1660,3 +1660,15 @@ transform: translateX(0%);
     -o-animation-play-state: paused;
      animation-play-state: paused;
 }
+
+
+#primary .logged-in-as {
+    margin-bottom: 0;
+}
+#primary .comment-form-comment {
+    margin-bottom: 0.5rem;
+}
+
+#commentform .gglcptch {
+    margin: 0;
+}
