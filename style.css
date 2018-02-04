@@ -35,7 +35,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Content
 	## Posts and pages
 	## Comments
-# Infinite scroll
 # Media
 	## Captions
 	## Galleries
@@ -775,21 +774,6 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-    /* Theme Footer (when set to scrolling) */
-    display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-    display: block;
-}
-
-/*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
@@ -1196,8 +1180,7 @@ li.category a:hover, li.tag a:hover {
     padding-left: 1em;
 }
 
-
-.site-info, #infinite-footer .blog-info {
+.site-info {
     font-size: 0.8rem;
     font-weight: 300;
     text-align: center;
@@ -1206,28 +1189,15 @@ li.category a:hover, li.tag a:hover {
     width:100%;
 }
 
-#infinite-footer .blog-info a, .site-footer a {
+.site-footer a {
     font-size: 0.8rem;
     font-weight: 500;
 }
 
-.site-footer, #infinite-footer {
+.site-footer {
     border-top: 1px solid #ccc;
     background-color: rgba(246,246,246,0.95);
 }
-
-/** This is to replace a broken media select on jetpack */
-@media (max-width: 640px) {
-#infinite-footer {
-    position: fixed;
-}
-}
-
-/* For the Archive list in the sidebar
-ul {
-    margin-left: 0;
-}*/
-
 
 h1, h2, h3, h4, h5, h6 {
     font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -1467,7 +1437,7 @@ input:hover[type="email"], input:hover[type="number"], input:hover[type="search"
     margin-bottom: 1rem;
 }
 
-#content input[type="submit"], .infinite-scroll #infinite-handle span button {
+#content input[type="submit"] {
     border-radius: 3px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
     color: #fff;
@@ -1612,7 +1582,7 @@ input.search-field {
 }
 
 #respond .form-submit input, #respond .form-submit input#comment-submit, #respond .comment-form-fields input[type=submit], #respond p.form-submit input[type=submit], #respond input[type=submit], #commentform #submit,
-#cancel-comment-reply-link, #content input[type="submit"], .infinite-scroll #infinite-handle span button
+#cancel-comment-reply-link, #content input[type="submit"]
 {
     line-height: 18px !important;
     border: 1px solid #ccc !important;
