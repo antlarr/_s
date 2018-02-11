@@ -39,7 +39,7 @@ function changeOffsets(animatedObject, keyFramesName, startPos, endPos)
     animatedObject.style.animationName = keyFramesName;
 }
 
-function setupNewsTicker(containerID, scrollableID, itemsClassName, keyFramesName, speed=8)
+function setupScrollingNewsTicker(containerID, scrollableID, itemsClassName, keyFramesName, speed=8)
 {
     var container = document.getElementById(containerID);
     var scrollable = document.getElementById(scrollableID);
@@ -61,4 +61,4 @@ function setupNewsTicker(containerID, scrollableID, itemsClassName, keyFramesNam
     scrollable.style.animationDuration = scrollableWidth/(speed*10)+'s';
 }
 
-setupNewsTicker('newsticker-container', 'newsticker-scrollable', 'newsticker-item', 'scroll-left');
+setupScrollingNewsTicker('newsticker-container', 'newsticker-scrollable', 'newsticker-item', 'scroll-left');
