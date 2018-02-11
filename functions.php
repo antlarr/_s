@@ -164,3 +164,28 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Returns if the newsticker should be used or not (for example, because
+ * there aren't enough posts yet to show in it.
+ */
+function ankh_morpork_has_newsticker() {
+    return (wp_count_posts()->publish >= 5);
+}
+
+/**
+ * Print a list of random posts for the newsticker.
+ */
+function ankh_morpork_get_newsticker_random_posts() {
+    global $post;
+    $args = array( 'posts_per_page' => 5, 'orderby' => 'rand' );
+    $rand_posts = get_posts( $args );
+
+    echo '<ul id="newsticker-scrollable">';
+    foreach ( $rand_posts as $post ) {
+        setup_postdata( $post );
+        echo sprintf('<li class="newsticker-item"><a href="%s">%s <time>(%s)</time></a></li>', esc_url(get_permalink()), esc_html(get_the_title()), esc_html(get_the_date('Y-m-d')));
+    };
+    echo '</ul>';
+    wp_reset_postdata();
+}

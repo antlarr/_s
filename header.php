@@ -51,6 +51,13 @@
 				) );
 			? >
 -->
+		<?php
+			if ( ankh_morpork_has_newsticker() ) : ?>
+                            <div id="newsticker-container">
+                                <?php ankh_morpork_get_newsticker_random_posts() ?>
+                            </div>
+                <?php endif; ?>
+<!--
                       <div id="newsticker-container">
                       <ul id="newsticker-scrollable">
                       <li class="newsticker-item"><a href="https://antlarr.io/">(2018/01/30) This is a link to a post</a>
@@ -61,6 +68,7 @@
                       <li class="newsticker-item"><a href="https://antlarr.io/">(2018/02/08) How to install some other application</a>
                       </ul>
                       </div>
+-->
                 </nav><!-- #site-navigation -->
 
 	</header><!-- #masthead -->
