@@ -331,6 +331,9 @@ code, kbd, tt, var {
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
     font-size: 15px;
     font-size: 0.9375rem;
+    background: #f2f2ff;
+    padding: 0.1em 0.3em;
+    border: 1px solid #e0e0ff;
 }
 
 abbr, acronym {
