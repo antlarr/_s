@@ -1093,10 +1093,12 @@ button.menu-toggle {
   .site-content {
 	flex-direction: row;
   }
+  #secondary {
+      max-width: 20vw;
+  }
 }
 
 #primary {
-    float:left;
     display:flex;
     margin-top: 1rem;
     flex: 1 1 auto;
