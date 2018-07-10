@@ -1743,3 +1743,7 @@ li.newsticker-item time {
 #commentform .gglcptch {
     margin: 0;
 }
+
+.akismet_comment_form_privacy_notice {
+    font-size: 0.66rem;
+}
