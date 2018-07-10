@@ -107,7 +107,7 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string {
 	color: #9a6e3a;
-	background: hsla(0, 0%, 100%, .5);
+/*	background: hsla(0, 0%, 100%, .5);*/
 }
 
 .token.atrule,
@@ -171,4 +171,9 @@ pre[class*="language-"] {
 
 .command-line-prompt > span[data-prompt]:before {
 	content: attr(data-prompt);
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+	white-space: pre-wrap;
 }
