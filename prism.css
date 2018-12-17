@@ -57,7 +57,12 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #f5f2f0;
+    margin: 0 1em;
+    background: #f2f2ff;
+    padding: 0.6em 1em;
+    /*! white-space: nowrap; */
+    border: 1px solid #e0e0ff;
+    border-left: 2px solid rgb(17,79,128);
 }
 
 /* Inline code */
