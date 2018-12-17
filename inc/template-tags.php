@@ -36,15 +36,10 @@ if ( ! function_exists( 'ankh_morpork_posted_on' ) ) :
                 $byline = '<img src="' . get_template_directory_uri() . '/images/user.png" class="byline">' .
                     '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>';
 
-                $rtime = do_shortcode('[rt_reading_time label="XX" postfix="XX" postfix_singular="XX"]');
-                $rtime = substr(strstr( $rtime, 'XX '), 3);
-                $rtime = strstr( $rtime, ' XX', true);
-
-                if ( intval($rtime) > 1 ) {
-		    $readtime = '<img src="' . get_template_directory_uri() . '/images/chronometer.png" class="readingtime">' . $rtime . ' mins.';
-                } else {
-		    $readtime = '<img src="' . get_template_directory_uri() . '/images/chronometer.png" class="readingtime">' . $rtime . ' min.';
-                }
+                $rtime = do_shortcode('[rt_reading_time postfix="mins." postfix_singular="min."]');
+                $rtime=preg_replace('/<\/?span[^>]*>/','',$rtime);
+                $rtime=preg_replace('/^ */','',$rtime);
+                $readtime = '<img src="' . get_template_directory_uri() . '/images/chronometer.png" class="readingtime">' . $rtime;
 
 		echo '<span class="byline"> ' . $byline . '</span><span class="posted-on">' . $posted_on . '</span><span class="readingtime">' . $readtime . '</span>' ; // WPCS: XSS OK.
 
