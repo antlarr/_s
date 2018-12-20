@@ -1802,3 +1802,9 @@ a.one-click-install-button.inline {
     box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.7);
     transition-duration: 0s;
 }
+
+.table-of-screenshots {
+    font-size: 85%;
+    font-weight: 300;
+    text-align: center;
+}
