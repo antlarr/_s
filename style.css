@@ -1743,3 +1743,62 @@ li.newsticker-item time {
 .akismet_comment_form_privacy_notice {
     font-size: 0.66rem;
 }
+
+/***
+ * One-click-install button. Used like:
+ * <a href="/one-click-install/application.ymp" class="one-click-install-button">
+ *    <button>
+ *       <span class="install">Install </span>application
+ *    </button>
+ * </a>
+ *
+ * Don't forget the space at the end of the span, just in case the css isn't loaded.
+ */
+
+.one-click-install-button .install {
+    display:block;
+    padding: 0 0 3px 0;
+    font-size: 85%;
+    color: #787;
+}
+
+a.one-click-install-button {
+    display:block;
+    text-align: center;
+}
+
+a.one-click-install-button.inline {
+    display:inline;
+}
+
+.one-click-install-button button {
+    background-image: url('https://antlarr.io/wp-content/themes/ankh-morpork/images/opensuse-geeko.png');
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 0.4em 8px 0.4em 36px;
+    border-radius: 8px;
+    background-color: #e6e6e6;
+    box-shadow: 0px 8px 10px 0 rgba(0,0,0,0.2), 0 3px 3px 0 rgba(0,0,0,0.6);
+    transition-duration: 0.5s;
+    font-weight: bold;
+}
+
+.one-click-install-button button:focus {
+    outline:none;
+}
+
+.one-click-install-button button:hover {
+    background-image: url('https://antlarr.io/wp-content/themes/ankh-morpork/images/opensuse-geeko-download.png');
+    background-color: #c6c6c6;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: left;
+    transition-duration: 0.5s;
+}
+
+.one-click-install-button button:active {
+    transform: translateY(3px);
+    box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.7);
+    transition-duration: 0s;
+}
